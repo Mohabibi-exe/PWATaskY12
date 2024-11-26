@@ -1,0 +1,441 @@
+.faculty-glyphic-regular {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.edu-au-vic-wa-nt-pre {
+    font-family: "Edu AU VIC WA NT Pre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing:border-box; /**/
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins"; /**/
+}
+
+/*INDEX PAGE*/
+
+.navbar {
+    background: rgb(56, 185, 56);
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto auto auto auto; /* order is top right bottom left. Auto makes it adjust automatically based on device screen */
+    padding: auto auto auto auto ;
+
+}
+
+#navbar_logo {
+    background-color: rgb(56, 185, 56);
+    color: white;
+    font-family: 'faculty glyphic';
+    /*background-image: linear-gradient(to top, #fff 0%, rgb(0, 0, 0)  ); Tried making a gradient for my Logo but looked horrible*/
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /*when hovered over changes how the mouse looks to the click mouse*/
+    text-decoration: none;
+    font-size: 32px;
+    
+}
+
+.navbar_menu{
+    display: flex; /**/
+    align-items: center;
+    list-style: none; /**/
+    text-align: center; /**/
+}
+
+.navbar_item{
+    height: 80px;
+
+}
+
+.navbar_links{
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 16px 0 16px;
+    height: 100%;
+}
+
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px 0 16px;
+    width: 100%;
+}
+
+.Btn{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.Btn:hover {
+    background: rgb(13,152,186); /*This is the colour the button will transition to*/
+    transition: all 0.3s ease; /*Transition makes the button transition when hovered over and 0.3s is the time, ease makes it fade into it instead of being an instant transition */
+}
+
+.navbar_links:hover{
+    color: #c43f30;
+    transition: all 0.3s ease; 
+}
+
+/*Main Section CSS*/
+
+.main {
+    background-color: #ffff;
+}
+
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /**/
+    align-items: center;
+    justify-content: center; /**/
+    margin: 0 auto; /**/
+    height: 90vh; /*90 view port height essentially makes it cover 90% of the screen in terms of size*/
+    background-color: #ffff;
+    z-index: 1; /**/
+    width: 100%;
+    max-width: 1300px; /**/
+    padding: 0 auto; /*when doing two values only for padding/margin it does vertical then horizontal which is easier to do*/
+    
+}
+
+.main_content h1 {
+    font-size: 64px ;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, rgb(56, 185, 56) 0%, rgb(23, 235, 23) 100%) ; 
+    /*Top specifies the direction the gradient flows in while the percentages indicate from beginning to end*/
+    background-size: 100%;
+    -webkit-background-clip: text; /*This makes the background clip through the text and so it changes how the text looks*/
+    -webkit-text-fill-color: transparent; /*This makes the background we set only visible through the text and instead of making a gradient background it makes the text itself gradient */
+    
+}
+
+.main_content h2{
+    font-size: 64px ;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, rgb(29, 132, 46) 0%, green 100%) ;
+    background-size: 100%;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.main_content p{
+    margin-top: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Edu AU VIC WA NT Pre";
+    color: rgb(7, 77, 7);
+}
+
+.main_btn{
+    font-size: 16px;
+    background-image: linear-gradient(to top, rgb(88, 212, 67) 0%, rgb(121, 255, 98)  100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    margin-top:32px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.main_btn a { /*I only did this because the hover effect needs it so it doesn't break*/
+    position: relative;
+    z-index: 2;
+    color:#fff;
+    text-decoration: none;
+}
+
+.main_btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(13,152,186);
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.main_btn:hover {
+    color: #fff;
+
+}
+
+.main_btn:hover::after{
+    width: 100%;
+}
+
+.main_img_container {
+    text-align: center;
+}
+
+#main_img {
+    height: 80%;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px auto;
+    
+}
+
+/*Recipes CSS*/
+
+.Recipes {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.Recipes h1 {
+    background-color: #ff8177 ;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-size: 100%;
+    margin-bottom: 80px;
+    font-size: 40px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Recipes_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Recipes_card{ /*These are general settings for the elements of Recipes card and will apply to all of them so the used here will have to be changed for the others*/
+    margin: 16px;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 0%), url(Images/PizzaNapolitana.jpg) ; /*Linear gradient on the background to make it darker to allow for better reading of the text*/
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.Recipes_card:nth-child(2) { /*This targets the second Recipes card since it is targetting the second child of Recipes card*/
+
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 0%), url(Images/KiwiCake.jpg) ; /*Linear gradient on the background to make it darker to allow for better reading of the text*/
+
+}
+
+.Recipes h2{
+    position: absolute;
+    top: 350px;
+    left:30px;
+
+}
+
+.Recipes_card p{
+    position: absolute;
+    top: 400px;
+    left: 30px;
+
+}
+
+.Recipes_card button {
+    columns: #ffff; /**/
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    top: 440px;/**/
+    left: 40px;/**/
+    position: absolute;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Recipes_card:hover {
+    transform: scale(1.08); /**/
+    transition: 0.25s ease-in;
+}
+
+/* Index Footer */
+
+.footer_container{
+    background-color:rgb(56, 185, 56);
+    text-align: center;
+    color: white;
+}
+
+/*Recipes CSS*/
+
+.SRecipes h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.SRecipes_List{
+    display: inline-block;
+    border: 1px solid ☐ hsl(0, 0%, 60%);
+    margin: 5px;
+    width: 200px;
+    align-items: center;
+    
+}
+
+.SRecipes_Desc{
+    padding: 10px;
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+}
+.SRecipes_List_Item:hover{
+
+    border: 1px solid ☐ hsl(0, 0%, 20%);
+}
+.SRecipes_List img{
+    width: 100%;
+    height: auto;
+}
+
+.RecipeText {
+    margin: 10px auto; /* Using auto for the second one keeps it horizontall centred because it balances the space on each side */
+    padding: 20px; /* just gives more space*/
+    width: 400px; /* keeps the width of the text consistent instead of having long lines*/
+    text-align: center; /* Center text within the box */
+    background-color: #f8f9fa; /* Lightens background a bit more */
+    border: 1px solid #ddd; /* Subtle border for the box to make it more defined */
+    border-radius: 8px; /* thsi rounds the corners of the border box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* the low pixel count keeps the shadow really soft but gives depth */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333; 
+    display: flex;
+    justify-content: center; /* Doing this horizontally centers the contents which is the text that will be held in the border */
+    align-items: center; /* Vertically centers in the box same as justify-content contents */
+    min-height: 150px; /* Setting a minimum height for the box gives them a more uniform look */
+}
+
+.RecipeHeading{
+    text-align: center;
+
+}
+
+/*Suggestions and Recipe List CSS*/
+
+.Suggestion_Content {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.RecipeHeading {
+    font-size: 32px;
+    color: #38b938; /* Green to match the site */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Add Recipe Form */
+#Add_Recipe_Form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Subtle gray for form background */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Add_Recipe_Form input,
+#Add_Recipe_Form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#Add_Recipe_Form input::placeholder,
+#Add_Recipe_Form textarea::placeholder {
+    color: #aaa; /* Lighter text for placeholders */
+}
+
+#Add_Recipe_Form button {
+    background-color: #38b938; /* Green button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Add_Recipe_Form button:hover {
+    background-color: #2d932d; /* Slightly darker green on hover */
+}
+
+.SRecipes_List li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

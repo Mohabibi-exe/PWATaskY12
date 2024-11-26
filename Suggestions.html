@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<link rel='stylesheet' href='indexCSS.css'>
+
+<html>
+
+<head>
+    <title> M-Kitchen </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--This is linking google fonts to my website-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Faculty+Glyphic&family=Poppins&display=swap" rel="stylesheet"> <!--This imports in three fonts from googlefonts-->
+
+<script src="https://kit.fontawesome.com/999a2ea303.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+
+<!--Navbar Section-->
+    <nav class="navbar"> <!--Nav tag is for site navigation that's why I used it. I made navbar a class since it will be one in all my other pages-->
+        <div class="navbar_container"> <!--Used the div tag since its just easy to style with CSS and doesn't really have any unique effects or capacities, its just a general code container.-->
+            
+            <a href="/" id="navbar_logo"> <i class="fa-solid fa-kitchen-set"></i> The Mediterranean Kitchen</a> <!--/ in href means that clicking on the link takes to the index page of the site. the logo is just the three letters. the <a> anchor tag is for hyperlinks. Id helps in CSS styling -->
+            
+                <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span> <!--Span stays in line with text but is easy to style it on its own-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+            
+            </div>
+            
+            <ul class="navbar_menu"> <!--ul tag is for unordered lists, it includes ordered list items. I also removed its bullet points in CSS-->
+                
+                <li class="navbar_item"> <!--li tag is an ordered list because I care about the order of the following items-->
+                    <a href="/" class="navbar_links">Home</a>
+                </li>
+
+                <li class="navbar_item"> <!--li tag is an ordered list because I care about the order of the following items-->
+                    <a href="index.html" class="navbar_links">Recipes </a>
+                </li>
+
+
+                <li class="navbar_btn"> <!--is going to be a button hence I used a different class for its CSS-->
+                    <a href="Suggestions.html" class="Btn">Suggestions</a>
+                </li>
+                
+            </ul>
+        </div>
+        <hr>
+    </nav>
+        <!--Main Section-->
+
+    </head>
+    <body style="flex: 1; ">
+    
+        <div class="Suggestion_Content">
+            <h1 class="RecipeHeading">Recipe Suggestions</h1>
+            
+            <!-- Form to Add Recipes -->
+            <form id="Add_Recipe_Form">
+                <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+                <textarea id="recipe-ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+                <button type="submit" class="main_btn">Add Recipe</button>
+            </form>
+    
+            <!-- List of Recipes -->
+            <ul id="Recipe-list" class="SRecipes_List"></ul>
+        </div>
+    
+    
+    
+    
+
+<!--Footer-->
+    <div style="    position: absolute;
+    bottom: 0; width: 100%;" class="footer_container">
+                    <h2>Maker & Purpose</h2>
+                    <h3>Made by Mohab Elshaboury for Year 12 Software engineering PWA Task</h3>
+            </div>
+        </div>
+    </div>
+
+
+<!--Linking the java script files to my HTML-->
+    <script type="module" src="db.js"></script>
+    <script type="module" src="app.js"></script>
+    <script src="SW.js"></script>
+    
+
+
+</body>
+</html>
